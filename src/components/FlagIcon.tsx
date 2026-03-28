@@ -1,25 +1,41 @@
 'use client';
 
+import * as Flags from 'country-flag-icons/react/3x2';
+import type { ComponentType, SVGProps } from 'react';
+
 interface FlagIconProps {
   code: string;
   size?: number;
 }
 
 export default function FlagIcon({ code, size = 28 }: FlagIconProps) {
-  const src = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
+  const upperCode = code.toUpperCase();
+  const FlagComponent = (Flags as Record<string, ComponentType<SVGProps<SVGSVGElement>>>)[upperCode];
+
+  const h = Math.round(size * 0.67);
+
+  if (!FlagComponent) {
+    return (
+      <span
+        style={{
+          display: 'inline-block',
+          width: size,
+          height: h,
+          background: 'var(--bg-tertiary, #2a2a2a)',
+          borderRadius: 3,
+        }}
+      />
+    );
+  }
 
   return (
-    <img
-      src={src}
-      alt={code}
-      width={size}
-      height={Math.round(size * 0.75)}
+    <FlagComponent
       style={{
+        width: size,
+        height: h,
         borderRadius: 3,
-        objectFit: 'cover',
         display: 'block',
       }}
-      loading="lazy"
     />
   );
 }
