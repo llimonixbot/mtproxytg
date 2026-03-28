@@ -1,0 +1,30 @@
+[
+  {
+    "geo": "DE",
+    "name": "Germany",
+    "server": "81.90.25.56",
+    "port": 3333,
+    "secret": "ee52cdc2173b12fb4064a59c4ff48f9832617074656b612e7275"
+  },
+  {
+    "geo": "PL",
+    "name": "Poland #1",
+    "server": "195.3.222.173",
+    "port": 1488,
+    "secret": "eeb4ae7296ac411e785b5d54239c4f5b3a766b2e636f6d"
+  },
+  {
+    "geo": "PL",
+    "name": "Poland #2",
+    "server": "178.215.239.11",
+    "port": 8841,
+    "secret": "ee3efb85f63fd099d216eeafc402893eef7275747562652e7275"
+  },
+  {
+    "geo": "FI",
+    "name": "Finland",
+    "server": "138.124.7.76",
+    "port": 4444,
+    "secret": "eec0f265f65c522ff82ef23933d7c3240d6f7a6f6e2e7275"
+  }
+]

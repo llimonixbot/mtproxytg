@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://mtproxy.tg/sitemap.xml
+
+Host: https://mtproxy.tg
