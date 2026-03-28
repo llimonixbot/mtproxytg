@@ -125,7 +125,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru">
       <head>
-        {/* Hreflang для мультиязычного SEO */}
         <link rel="alternate" hrefLang="ru" href="https://mtproxy.tg/?lang=ru" />
         <link rel="alternate" hrefLang="en" href="https://mtproxy.tg/?lang=en" />
         <link rel="alternate" hrefLang="fa" href="https://mtproxy.tg/?lang=ir" />
