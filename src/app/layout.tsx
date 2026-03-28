@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { I18nProvider } from '@/i18n';
 import Header from '@/components/Header';
@@ -140,6 +141,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </I18nProvider>
+        <Script
+          src="https://anltcs.llimonix.dev/api/script.js"
+          data-site-id="6084685b56d3"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
