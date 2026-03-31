@@ -1,6 +1,6 @@
 import { Proxy } from './types';
 
-export const CHANNEL_URL = 'https://t.me/+Nx-_kBu9X0QyNDBi';
+export const CHANNEL_URL = 'tg://join?invite=Nx-_kBu9X0QyNDBi';
 
 export const DEFAULT_PROXIES: Proxy[] = [];
 

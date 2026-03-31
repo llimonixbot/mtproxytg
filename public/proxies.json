@@ -1,5 +1,19 @@
 [
   {
+    "geo": "NL",
+    "name": "Netherlands",
+    "server": "144.31.237.90",
+    "port": 6767,
+    "secret": "eea9eda7da0345b8b0153744ca89d92f577275747562652e7275"
+  },
+  {
+    "geo": "SE",
+    "name": "Sweden",
+    "server": "81.90.21.194",
+    "port": 6969,
+    "secret": "ee89085aa60df67eec71cf4fd7c609a7c1617074656b612e7275"
+  }, 
+  {
     "geo": "DE",
     "name": "Germany",
     "server": "81.90.25.56",

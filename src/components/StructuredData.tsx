@@ -51,7 +51,7 @@ export default function StructuredData() {
     url: 'https://mtproxy.tg',
     logo: 'https://mtproxy.tg/icon-512.png',
     sameAs: [
-      'https://t.me/+Nx-_kBu9X0QyNDBi',
+      'tg://join?invite=Nx-_kBu9X0QyNDBi',
     ],
   };
 
