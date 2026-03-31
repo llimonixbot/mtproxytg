@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RegisterSW from '@/components/RegisterSW';
 import StructuredData from '@/components/StructuredData';
+import AnalyticsScript from '@/components/AnalyticsScript';
 
 export const metadata: Metadata = {
   title: {
@@ -140,11 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </I18nProvider>
-        <Script
-          src="https://anltcs.llimonix.dev/api/script.js"
-          data-site-id="6084685b56d3"
-          strategy="afterInteractive"
-        />
+        <AnalyticsScript />
       </body>
     </html>
   );
