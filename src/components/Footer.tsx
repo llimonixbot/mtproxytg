@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-links">
           {LINKS.map((l) => (
-            <Link key={l.href} href={l.href}>
+            <Link key={l.href} href={l.href} prefetch={false}>
               {t.nav[l.key]}
             </Link>
           ))}

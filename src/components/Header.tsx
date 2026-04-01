@@ -48,7 +48,7 @@ export default function Header() {
     <>
       <header className="header">
         <div className="header-inner">
-          <Link href="/" className="logo" onClick={() => setMobileOpen(false)}>
+          <Link href="/" className="logo" onClick={() => setMobileOpen(false)} prefetch={false}>
             <img
               src="/icon-512.png"
               alt="MTProxy for Telegram"
@@ -65,6 +65,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`nav-link${isActive(item.href) ? ' active' : ''}`}
+                prefetch={false}
               >
                 {t.nav[item.key]}
               </Link>
@@ -92,6 +93,7 @@ export default function Header() {
               href={item.href}
               className={`nav-link${isActive(item.href) ? ' active' : ''}`}
               onClick={() => setMobileOpen(false)}
+              prefetch={false}
             >
               {t.nav[item.key]}
             </Link>

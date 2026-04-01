@@ -32,7 +32,7 @@ export default function HomePage() {
             <IconTelegram size={16} />
             {t.hero.btn_channel}
           </a>
-          <Link href="/howto" className="btn btn-outline">
+          <Link href="/howto" className="btn btn-outline" prefetch={false}>
             {t.hero.btn_howto}
           </Link>
         </div>
