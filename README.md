@@ -15,6 +15,7 @@ src/
 │   ├── pwa/page.tsx        # Добавить на экран
 │   └── contacts/page.tsx   # Контакты
 ├── components/
+│   ├── AnalyticsScript.tsx # Аналитика
 │   ├── Header.tsx          # Шапка + навигация + бургер
 │   ├── Footer.tsx          # Подвал
 │   ├── ProxyCard.tsx       # Карточка прокси (флаг + кнопка)
