@@ -38,7 +38,7 @@
     "geo": "FI",
     "name": "Finland",
     "server": "138.124.7.76",
-    "port": 4444,
-    "secret": "eec0f265f65c522ff82ef23933d7c3240d6f7a6f6e2e7275"
+    "port": 12345,
+    "secret": "ec0f265f65c522ff82ef23933d7c3240d7275747562652e7275"
   }
 ]
