@@ -1,0 +1,21 @@
+/manifest.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/icon-192.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/icon-512.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=2592000, immutable
+
+/sw.js
+  Cache-Control: public, max-age=86400
+  Service-Worker-Allowed: /
+
+/proxies.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=600
