@@ -22,23 +22,16 @@
   },
   {
     "geo": "PL",
-    "name": "Poland #1",
-    "server": "195.3.222.173",
-    "port": 1488,
-    "secret": "eeb4ae7296ac411e785b5d54239c4f5b3a766b2e636f6d"
-  },
-  {
-    "geo": "PL",
-    "name": "Poland #2",
+    "name": "Poland",
     "server": "178.215.239.11",
-    "port": 8841,
-    "secret": "ee3efb85f63fd099d216eeafc402893eef7275747562652e7275"
+    "port": 8443,
+    "secret": "ee763ca1f2e4f78f2d37d7bc0e9cdf0f1e636c6f7564666c6172652e636f6d"
   },
   {
     "geo": "FI",
     "name": "Finland",
     "server": "138.124.7.76",
-    "port": 12345,
-    "secret": "ec0f265f65c522ff82ef23933d7c3240d7275747562652e7275"
+    "port": 4525,
+    "secret": "ee034798bde4d7737d70e742f51fba095c636c6f7564666c6172652e636f6d"
   }
 ]
