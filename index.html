@@ -245,7 +245,7 @@ a:hover{color:var(--accent-hover)}
   <section class="pin-section">
     <h3 data-i18n="pin.title"></h3>
     <p data-i18n="pin.desc"></p>
-    <button class="btn btn-primary btn-sm" id="installBtn" onclick="navigate('pwa');return false">
+    <button class="btn btn-primary btn-sm" id="installBtn" style="display:none" onclick="handleInstall()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
       <span data-i18n="pin.install"></span>
     </button>
@@ -479,8 +479,10 @@ ir: {
 }
 };
 
-// ============ FLAGS (emoji) ============
-const FLAGS = {NL:'🇳🇱',SE:'🇸🇪',DE:'🇩🇪',PL:'🇵🇱',FI:'🇫🇮',US:'🇺🇸',GB:'🇬🇧',FR:'🇫🇷',RU:'🇷🇺'};
+// ============ FLAGS ============
+function flagImg(code) {
+  return '<img src="https://flagcdn.com/w80/'+code.toLowerCase()+'.png" width="32" height="21" alt="'+code+'" style="border-radius:3px;display:block" onerror="this.style.display=\'none\'">';
+}
 
 // ============ STATE ============
 let lang = 'ru';
@@ -604,7 +606,7 @@ function renderProxies() {
   grid.innerHTML = proxies.map(p =>
     `<div class="proxy-card">
       <div class="proxy-info">
-        <div class="proxy-flag">${FLAGS[p.geo]||'🌐'}</div>
+        <div class="proxy-flag">${flagImg(p.geo)}</div>
         <div class="proxy-meta">
           <div class="proxy-name">${esc(p.name)}</div>
           <div class="proxy-details">
