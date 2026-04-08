@@ -53,6 +53,11 @@ const en: Translation = {
       },
     ],
   },
+  public_proxies: {
+    title: 'Public proxies',
+    loading: 'Loading list…',
+    error: 'Failed to load the list. Please try again later.',
+  },
   howto_page: {
     title: 'How to Connect',
     desc: 'Step-by-step guide for any device',

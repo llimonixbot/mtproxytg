@@ -109,6 +109,12 @@ export interface FooterStrings {
   copy: string;
 }
 
+export interface PublicProxiesStrings {
+  title: string;
+  loading: string;
+  error: string;
+}
+
 export interface Translation {
   nav: NavStrings;
   hero: HeroStrings;
@@ -120,4 +126,5 @@ export interface Translation {
   pwa_page: PWAStrings;
   contacts_page: ContactsStrings;
   footer: FooterStrings;
+  public_proxies: PublicProxiesStrings;
 }

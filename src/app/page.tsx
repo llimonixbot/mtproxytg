@@ -5,6 +5,7 @@ import { useI18n } from '@/i18n';
 import { CHANNEL_URL } from '@/lib/constants';
 import { useProxies } from '@/lib/useProxies';
 import ProxyCard from '@/components/ProxyCard';
+import PublicProxies from '@/components/PublicProxies';
 import FAQ from '@/components/FAQ';
 import { IconBolt, IconGlobe, IconQuestion, IconTelegram } from '@/components/Icons';
 import InstallButton from '@/components/InstallButton';
@@ -51,6 +52,9 @@ export default function HomePage() {
             <ProxyCard key={`${proxy.geo}-${i}`} proxy={proxy} />
           ))}
         </div>
+
+        {/* Public proxies spoiler */}
+        <PublicProxies />
       </section>
 
       {/* Pin */}
