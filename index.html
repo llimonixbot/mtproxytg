@@ -14,7 +14,6 @@
 <link rel="alternate" hreflang="fa" href="https://mtproxy.tg/?lang=ir">
 <link rel="alternate" hreflang="x-default" href="https://mtproxy.tg/">
 
-<!-- Open Graph -->
 <meta property="og:title" content="MTProxy — бесплатные прокси для Telegram">
 <meta property="og:description" content="Список рабочих MTProto-прокси для Telegram. Подключение в один клик. Бесплатно, быстро, безопасно.">
 <meta property="og:url" content="https://mtproxy.tg">
@@ -23,12 +22,10 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="fa_IR">
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MTProxy — Free MTProto Proxy for Telegram">
 <meta name="twitter:description" content="Fast and free MTProto proxies for Telegram. One-click connection.">
 
-<!-- Structured Data -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MTProxy for Telegram","url":"https://mtproxy.tg","description":"Free MTProto proxies for Telegram. One-click connection.","inLanguage":["ru","en","fa"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MTProxy for Telegram","applicationCategory":"UtilitiesApplication","operatingSystem":"Android, iOS, Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 
@@ -53,7 +50,6 @@ body{font-family:var(--font);background:var(--bg-secondary);color:var(--text-pri
 a{color:var(--accent);text-decoration:none;transition:var(--transition)}
 a:hover{color:var(--accent-hover)}
 
-/* Header */
 .header{position:sticky;top:0;z-index:100;background:rgba(23,33,43,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
 .header-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:56px}
 .logo{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;text-decoration:none;color:var(--text-primary)}
@@ -69,7 +65,6 @@ a:hover{color:var(--accent-hover)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .burger span{width:22px;height:2px;background:var(--text-secondary);border-radius:2px;transition:var(--transition)}
 
-/* Mobile menu */
 .mobile-menu{position:fixed;top:56px;left:0;right:0;bottom:0;background:rgba(14,22,33,.97);backdrop-filter:blur(20px);z-index:99;padding:20px;display:none;flex-direction:column;gap:4px;animation:fadeIn .2s ease}
 .mobile-menu.open{display:flex}
 .mobile-menu .nav-link{padding:14px 16px;font-size:15px;border-radius:var(--radius);display:block}
@@ -77,15 +72,11 @@ a:hover{color:var(--accent-hover)}
 
 @media(max-width:880px){.nav{display:none}.burger{display:flex}}
 
-/* Main */
 .main{max-width:var(--max-w);margin:0 auto;padding:24px 20px 60px;flex:1}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .page-enter{animation:fadeIn .25s ease}
-
-/* Sections (views) */
 .view{display:none}.view.active{display:block}
 
-/* Hero */
 .hero{text-align:center;padding:48px 0 40px}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:var(--accent-glow);color:var(--accent);font-size:12px;font-weight:600;margin-bottom:16px;border:1px solid rgba(42,171,238,.2)}
 .hero h1{font-size:clamp(28px,5vw,40px);font-weight:700;line-height:1.2;margin-bottom:12px;letter-spacing:-.5px}
@@ -93,7 +84,6 @@ a:hover{color:var(--accent-hover)}
 .hero p{color:var(--text-secondary);font-size:16px;max-width:520px;margin:0 auto 24px}
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius);border:none;font-size:14px;font-weight:600;cursor:pointer;transition:var(--transition);font-family:var(--font);text-decoration:none}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-primary:hover{background:var(--accent-hover);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(42,171,238,.3)}
@@ -103,32 +93,49 @@ a:hover{color:var(--accent-hover)}
 .btn-connect{background:var(--accent);color:#fff;padding:10px 20px;border-radius:var(--radius-sm);border:none;font-size:13px;font-weight:600;cursor:pointer;transition:var(--transition);font-family:var(--font);white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 .btn-connect:hover{background:var(--accent-hover);color:#fff;transform:translateY(-1px)}
 
-/* Section labels */
 .section{margin-top:48px}
 .section-label{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
 .section-title{font-size:24px;font-weight:700;margin-bottom:8px;letter-spacing:-.3px}
 .section-desc{color:var(--text-secondary);font-size:14px;margin-bottom:24px}
 
-/* Proxy grid */
 .proxy-grid{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:640px){.proxy-grid{grid-template-columns:repeat(2,1fr)}}
 .proxy-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);transition:var(--transition)}
 .proxy-card:hover{border-color:var(--border-light);background:var(--bg-surface-hover)}
 .proxy-info{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
 .proxy-flag{width:42px;height:42px;border-radius:10px;background:var(--bg-surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
-.proxy-meta{min-width:0}
+.proxy-meta{min-width:0;flex:1}
 .proxy-name{font-weight:600;font-size:14px;margin-bottom:2px}
 .proxy-details{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .proxy-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(42,171,238,.1);color:var(--accent);font-size:11px;font-weight:500}
 .proxy-tag.online{background:rgba(79,174,78,.1);color:var(--success)}
 .proxy-status{width:6px;height:6px;border-radius:50%;background:var(--success);display:inline-block;flex-shrink:0}
 
-/* Pin section */
+/* ===== PUBLIC PROXIES SPOILER ===== */
+.pub-spoiler{margin-top:16px;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
+.pub-spoiler-header{background:var(--bg-card);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;color:var(--text-primary);user-select:none;transition:var(--transition)}
+.pub-spoiler-header:hover{background:var(--bg-surface-hover)}
+.pub-spoiler-left{display:flex;align-items:center;gap:10px}
+.pub-spoiler-count{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 7px;border-radius:11px;background:rgba(42,171,238,.15);color:var(--accent);font-size:11px;font-weight:700}
+.pub-spoiler-chevron{transition:transform .3s,color .2s;color:var(--text-muted);flex-shrink:0}
+.pub-spoiler.open .pub-spoiler-chevron{transform:rotate(180deg);color:var(--accent)}
+.pub-spoiler.open .pub-spoiler-header{border-bottom:1px solid var(--border)}
+.pub-spoiler-body{display:none;padding:16px}
+.pub-spoiler.open .pub-spoiler-body{display:block;animation:fadeIn .25s ease}
+.pub-spoiler-body .proxy-grid{max-height:600px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.08) rgba(255,255,255,.03)}
+.pub-spoiler-body .proxy-grid::-webkit-scrollbar{width:6px}
+.pub-spoiler-body .proxy-grid::-webkit-scrollbar-track{background:rgba(255,255,255,.03);border-radius:3px}
+.pub-spoiler-body .proxy-grid::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:3px}
+.pub-spoiler-body .proxy-grid::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.15)}
+.pub-spoiler-body .proxy-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px}
+.pub-spoiler-loader{display:flex;align-items:center;justify-content:center;gap:12px;padding:32px 0;color:var(--text-secondary);font-size:14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pub-spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,.1);border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite}
+
 .pin-section{margin-top:48px;padding:32px;text-align:center;background:linear-gradient(135deg,rgba(42,171,238,.06),rgba(42,171,238,.02));border:1px solid rgba(42,171,238,.12);border-radius:var(--radius-lg)}
 .pin-section h3{font-size:20px;font-weight:700;margin-bottom:8px}
 .pin-section p{color:var(--text-secondary);font-size:14px;max-width:460px;margin:0 auto 20px}
 
-/* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:8px}
 .faq-item{background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
 .faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;transition:var(--transition);user-select:none}
@@ -138,38 +145,32 @@ a:hover{color:var(--accent-hover)}
 .faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;color:var(--text-secondary);font-size:14px;line-height:1.7}
 .faq-item.open .faq-a{max-height:400px;padding:0 20px 16px}
 
-/* Page headers */
 .page-header{padding:40px 0 32px;text-align:center}
 .page-header h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin-bottom:8px}
 .page-header p{color:var(--text-secondary);font-size:15px;max-width:540px;margin:0 auto}
 
-/* Content blocks */
 .content-block{background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);padding:28px;margin-bottom:16px}
 .content-block h3{font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
 .content-block .step-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
 .content-block p{color:var(--text-secondary);font-size:14px;line-height:1.7}
 .icon-inline{display:inline-flex;color:var(--accent)}
 
-/* Contact */
 .contact-card{padding:32px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);text-align:center}
 .contact-card p{color:var(--text-secondary);font-size:15px}
 .tg-link{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:var(--radius);background:var(--accent);color:#fff;font-size:15px;font-weight:600;margin-top:20px;transition:var(--transition)}
 .tg-link:hover{background:var(--accent-hover);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(42,171,238,.3)}
 
-/* PWA steps */
 .pwa-steps{display:flex;flex-direction:column;gap:12px;margin-top:20px}
 .pwa-step{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--bg-surface);border-radius:var(--radius);border:1px solid var(--border)}
 .pwa-step-num{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
 .pwa-step h4{font-size:14px;font-weight:600;margin-bottom:4px}
 .pwa-step p{color:var(--text-secondary);font-size:13px}
 
-/* SEO block */
 .seo-block{margin-top:48px;padding:28px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border)}
 .seo-block h2{font-size:20px;font-weight:700;margin-bottom:16px;letter-spacing:-.3px}
 .seo-block p{color:var(--text-secondary);font-size:14px;line-height:1.8;margin-bottom:12px}
 .seo-block p:last-child{margin-bottom:0}
 
-/* Footer */
 .footer{border-top:1px solid var(--border);padding:32px 20px;margin-top:auto}
 .footer-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap}
@@ -177,7 +178,6 @@ a:hover{color:var(--accent-hover)}
 .footer-links a:hover{color:var(--text-primary)}
 .footer-copy{color:var(--text-muted);font-size:12px;line-height:1.6}
 
-/* Responsive */
 @media(max-width:600px){
 .hero{padding:32px 0 28px}
 .proxy-grid{grid-template-columns:1fr}
@@ -187,12 +187,12 @@ a:hover{color:var(--accent-hover)}
 .content-block{padding:20px}
 .footer-inner{flex-direction:column;text-align:center}
 .pin-section{padding:24px 20px}
+.pub-spoiler-body .proxy-name{max-width:140px}
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
 <div class="header-inner">
   <a href="/" class="logo" onclick="navigate('home');return false">
@@ -205,7 +205,6 @@ a:hover{color:var(--accent-hover)}
 </header>
 <div class="mobile-menu" id="mobileMenu"></div>
 
-<!-- MAIN -->
 <main class="main">
 
 <!-- HOME -->
@@ -235,6 +234,19 @@ a:hover{color:var(--accent-hover)}
     <h2 class="section-title" data-i18n="proxies.title"></h2>
     <p class="section-desc" data-i18n="proxies.desc"></p>
     <div class="proxy-grid" id="proxyGrid"></div>
+
+    <!-- PUBLIC PROXIES SPOILER -->
+    <div class="pub-spoiler" id="pubSpoiler">
+      <div class="pub-spoiler-header" onclick="togglePublicProxies()">
+        <span class="pub-spoiler-left">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span data-i18n="pub.title"></span>
+          <span class="pub-spoiler-count" id="pubCount" style="display:none"></span>
+        </span>
+        <svg class="pub-spoiler-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="pub-spoiler-body" id="pubBody"></div>
+    </div>
   </section>
 
   <section class="pin-section">
@@ -259,28 +271,18 @@ a:hover{color:var(--accent-hover)}
 <!-- HOWTO -->
 <div class="view" id="view-howto">
 <div class="page-enter">
-  <div class="page-header">
-    <h1 data-i18n="howto.title"></h1>
-    <p data-i18n="howto.desc"></p>
-  </div>
+  <div class="page-header"><h1 data-i18n="howto.title"></h1><p data-i18n="howto.desc"></p></div>
   <div id="howtoSteps"></div>
-  <div class="content-block" style="margin-top:24px">
-    <h3 data-i18n="howto.manual_title"></h3>
-    <p data-i18n="howto.manual_text"></p>
-  </div>
+  <div class="content-block" style="margin-top:24px"><h3 data-i18n="howto.manual_title"></h3><p data-i18n="howto.manual_text"></p></div>
 </div>
 </div>
 
 <!-- ABOUT -->
 <div class="view" id="view-about">
 <div class="page-enter">
-  <div class="page-header">
-    <h1 data-i18n="about.title"></h1>
-    <p data-i18n="about.desc"></p>
-  </div>
+  <div class="page-header"><h1 data-i18n="about.title"></h1><p data-i18n="about.desc"></p></div>
   <div class="pin-section" style="margin-top:0;margin-bottom:32px">
-    <h3 data-i18n="pin.title"></h3>
-    <p data-i18n="pin.desc"></p>
+    <h3 data-i18n="pin.title"></h3><p data-i18n="pin.desc"></p>
     <a href="#pwa" class="btn btn-primary btn-sm" onclick="navigate('pwa');return false" data-i18n="pin.install"></a>
   </div>
   <div id="aboutBlocks"></div>
@@ -290,10 +292,7 @@ a:hover{color:var(--accent-hover)}
 <!-- PWA -->
 <div class="view" id="view-pwa">
 <div class="page-enter">
-  <div class="page-header">
-    <h1 data-i18n="pwa.title"></h1>
-    <p data-i18n="pwa.desc"></p>
-  </div>
+  <div class="page-header"><h1 data-i18n="pwa.title"></h1><p data-i18n="pwa.desc"></p></div>
   <div id="pwaSections"></div>
 </div>
 </div>
@@ -301,10 +300,7 @@ a:hover{color:var(--accent-hover)}
 <!-- CONTACTS -->
 <div class="view" id="view-contacts">
 <div class="page-enter">
-  <div class="page-header">
-    <h1 data-i18n="contacts.title"></h1>
-    <p data-i18n="contacts.desc"></p>
-  </div>
+  <div class="page-header"><h1 data-i18n="contacts.title"></h1><p data-i18n="contacts.desc"></p></div>
   <div class="contact-card">
     <p data-i18n="contacts.text"></p>
     <a href="tg://join?invite=Nx-_kBu9X0QyNDBi" target="_blank" rel="noopener" class="tg-link">
@@ -317,7 +313,6 @@ a:hover{color:var(--accent-hover)}
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
 <div class="footer-inner">
   <div class="footer-links" id="footerLinks"></div>
@@ -327,373 +322,255 @@ a:hover{color:var(--accent-hover)}
 
 <script>
 // ============ TRANSLATIONS ============
-const T = {
-ru: {
-  nav: { home:'Главная', howto:'Как подключить', about:'О сервисе', pwa:'На экран', contacts:'Контакты' },
-  hero: { badge:'Бесплатные прокси', title:'Быстрый доступ к ', titleAccent:'Telegram', desc:'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.', btn_channel:'Наш канал', btn_howto:'Как подключить' },
-  proxies: { label:'Локации', title:'Подключение', desc:'Выберите страну и нажмите «Подключить».', connect:'Подключить ->', online:'Онлайн' },
-  pin: { title:'Сохраните сайт под рукой', desc:'Чтобы не потерять быстрый доступ к списку серверов, добавьте сайт на главный экран — открытие в один тап, без поиска во вкладках.', install:'Добавить на экран' },
-  faq: { label:'FAQ', title:'Частые вопросы', items:[
+const T={
+ru:{
+  nav:{home:'Главная',howto:'Как подключить',about:'О сервисе',pwa:'На экран',contacts:'Контакты'},
+  hero:{badge:'Бесплатные прокси',title:'Быстрый доступ к ',titleAccent:'Telegram',desc:'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.',btn_channel:'Наш канал',btn_howto:'Как подключить'},
+  proxies:{label:'Локации',title:'Подключение',desc:'Выберите страну и нажмите «Подключить».',connect:'Подключить ->',online:'Онлайн'},
+  pub:{title:'Публичные прокси',loading:'Загрузка списка…',error:'Не удалось загрузить список.'},
+  pin:{title:'Сохраните сайт под рукой',desc:'Чтобы не потерять быстрый доступ к списку серверов, добавьте сайт на главный экран — открытие в один тап, без поиска во вкладках.',install:'Добавить на экран'},
+  faq:{label:'FAQ',title:'Частые вопросы',items:[
     {q:'Что такое MTProto Proxy?',a:'MTProto — это протокол Telegram. Специальный прокси-сервер помогает направить трафик мессенджера через выбранный узел, что часто улучшает стабильность.'},
     {q:'Это безопасно?',a:'MTProto-прокси не видят содержимое ваших сообщений — весь трафик зашифрован протоколом MTProto от Telegram.'},
     {q:'Почему прокси перестал работать?',a:'Серверы могут блокироваться провайдерами. Мы регулярно обновляем список — зайдите на сайт или в наш канал за свежими прокси.'},
     {q:'Нужно ли платить?',a:'Нет. Все прокси предоставляются бесплатно. Мы не собираем данные, но можем показывать рекламу внутри Telegram.'},
     {q:'На каких устройствах работает?',a:'На всех: Android, iOS, Windows, macOS, Linux. Подключение происходит прямо в настройках Telegram.'}
   ]},
-  howto: { title:'Как подключить прокси', desc:'Пошаговая инструкция для любого устройства', steps:[
+  howto:{title:'Как подключить прокси',desc:'Пошаговая инструкция для любого устройства',steps:[
     {title:'Нажмите «Подключить»',text:'На главной странице выберите прокси и нажмите кнопку. Telegram откроется автоматически.'},
     {title:'Подтвердите подключение',text:'В открывшемся окне Telegram нажмите «Подключить прокси».'},
     {title:'Готово',text:'Прокси активен. Если соединение нестабильно — попробуйте другой сервер из списка.'}
-  ], manual_title:'Ручная настройка', manual_text:'Откройте Telegram → Настройки → Данные и память → Тип подключения → Использовать прокси → Добавить прокси. Выберите тип «MTProto» и введите данные сервера.' },
-  about: { title:'О сервисе', desc:'Мы поддерживаем актуальный список публичных MTProto прокси и даём удобные ссылки для быстрого подключения в Telegram.',
-    blocks:[
-      {icon:'shield',t:'Что такое MTProto прокси',p:'MTProto — это протокол Telegram. Специальный прокси-сервер помогает направить трафик мессенджера через выбранный узел, что часто улучшает стабильность.'},
-      {icon:'info',t:'Как пользоваться каталогом',p:'Регистрация на сайте не требуется: откройте главную страницу, выберите страну и нажмите «Подключить».'},
-      {icon:'refresh',t:'Обновления',p:'Новые серверы и объявления публикуются в официальном канале. Рекомендуем подписаться.'},
-      {icon:'server',t:'Ответственность',p:'Прокси предоставляются бесплатно и «как есть». Перед использованием оценивайте риски.'}
-    ]},
-  pwa: { title:'Добавить на экран', desc:'Быстрый доступ к прокси одним нажатием', sections:[
-    {title:'iPhone / iPad (Safari)',steps:[
-      {title:'Откройте сайт в Safari',desc:'Именно в Safari — из Chrome или Firefox не получится.'},
-      {title:'Нажмите «Поделиться»',desc:'Иконка с квадратом и стрелкой вверх внизу экрана.'},
-      {title:'Выберите «На экран Домой»',desc:'Пролистайте список и нажмите. Подтвердите добавление.'}
-    ]},
-    {title:'Android (Chrome)',steps:[
-      {title:'Откройте сайт в Chrome',desc:'Или в другом Chromium-браузере.'},
-      {title:'Откройте меню',desc:'Три точки в правом верхнем углу.'},
-      {title:'Нажмите «Добавить на главный экран»',desc:'Подтвердите — ярлык появится среди приложений.'}
-    ]}
+  ],manual_title:'Ручная настройка',manual_text:'Откройте Telegram → Настройки → Данные и память → Тип подключения → Использовать прокси → Добавить прокси. Выберите тип «MTProto» и введите данные сервера.'},
+  about:{title:'О сервисе',desc:'Мы поддерживаем актуальный список публичных MTProto прокси и даём удобные ссылки для быстрого подключения в Telegram.',blocks:[
+    {icon:'shield',t:'Что такое MTProto прокси',p:'MTProto — это протокол Telegram. Специальный прокси-сервер помогает направить трафик мессенджера через выбранный узел, что часто улучшает стабильность.'},
+    {icon:'info',t:'Как пользоваться каталогом',p:'Регистрация на сайте не требуется: откройте главную страницу, выберите страну и нажмите «Подключить».'},
+    {icon:'refresh',t:'Обновления',p:'Новые серверы и объявления публикуются в официальном канале. Рекомендуем подписаться.'},
+    {icon:'server',t:'Ответственность',p:'Прокси предоставляются бесплатно и «как есть». Перед использованием оценивайте риски.'}
   ]},
-  contacts: { title:'Контакты', desc:'Связаться с нами', text:'Все вопросы, предложения и заявки на добавление прокси — в наш Telegram-канал.', btn:'Открыть канал в Telegram' },
-  footer: { copy:'2026 © MTProxy for Telegram. Все права защищены. Прокси предоставляются «как есть».' },
-  seo: { title:'MTProto прокси для Telegram — бесплатно и безопасно', paragraphs:[
-    'MTProxy — это сервис бесплатных MTProto-прокси для мессенджера Telegram. Наши прокси-серверы расположены в Европе и обеспечивают стабильное соединение с высокой скоростью.',
-    'MTProto — это протокол, разработанный командой Telegram специально для быстрой и защищённой передачи данных. В отличие от VPN, MTProto-прокси работает только с трафиком Telegram.',
-    'Если Telegram заблокирован вашим провайдером — используйте наши прокси для обхода блокировок. Список серверов регулярно обновляется.'
-  ]}
+  pwa:{title:'Добавить на экран',desc:'Быстрый доступ к прокси одним нажатием',sections:[
+    {title:'iPhone / iPad (Safari)',steps:[{title:'Откройте сайт в Safari',desc:'Именно в Safari — из Chrome или Firefox не получится.'},{title:'Нажмите «Поделиться»',desc:'Иконка с квадратом и стрелкой вверх внизу экрана.'},{title:'Выберите «На экран Домой»',desc:'Пролистайте список и нажмите. Подтвердите добавление.'}]},
+    {title:'Android (Chrome)',steps:[{title:'Откройте сайт в Chrome',desc:'Или в другом Chromium-браузере.'},{title:'Откройте меню',desc:'Три точки в правом верхнем углу.'},{title:'Нажмите «Добавить на главный экран»',desc:'Подтвердите — ярлык появится среди приложений.'}]}
+  ]},
+  contacts:{title:'Контакты',desc:'Связаться с нами',text:'Все вопросы, предложения и заявки на добавление прокси — в наш Telegram-канал.',btn:'Открыть канал в Telegram'},
+  footer:{copy:'2026 © MTProxy for Telegram. Все права защищены. Прокси предоставляются «как есть».'},
+  seo:{title:'MTProto прокси для Telegram — бесплатно и безопасно',paragraphs:['MTProxy — это сервис бесплатных MTProto-прокси для мессенджера Telegram. Наши прокси-серверы расположены в Европе и обеспечивают стабильное соединение с высокой скоростью.','MTProto — это протокол, разработанный командой Telegram специально для быстрой и защищённой передачи данных. В отличие от VPN, MTProto-прокси работает только с трафиком Telegram.','Если Telegram заблокирован вашим провайдером — используйте наши прокси для обхода блокировок. Список серверов регулярно обновляется.']}
 },
-en: {
-  nav: { home:'Home', howto:'How to Connect', about:'About', pwa:'Add to Screen', contacts:'Contacts' },
-  hero: { badge:'Free proxies', title:'Fast access to ', titleAccent:'Telegram', desc:'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.', btn_channel:'Our Channel', btn_howto:'How to Connect' },
-  proxies: { label:'Locations', title:'Connect', desc:'Choose a country and tap "Connect".', connect:'Connect ->', online:'Online' },
-  pin: { title:'Keep the site handy', desc:'Add this page to your home screen so you don\'t lose quick access to the server list.', install:'Add to Home Screen' },
-  faq: { label:'FAQ', title:'Frequently Asked Questions', items:[
-    {q:'What is MTProto Proxy?',a:'MTProto is Telegram\'s protocol. A special proxy server routes the messenger\'s traffic through a chosen node, improving stability.'},
-    {q:'Is it safe?',a:'MTProto proxies cannot see your messages — all traffic is encrypted using Telegram\'s MTProto protocol.'},
+en:{
+  nav:{home:'Home',howto:'How to Connect',about:'About',pwa:'Add to Screen',contacts:'Contacts'},
+  hero:{badge:'Free proxies',title:'Fast access to ',titleAccent:'Telegram',desc:'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.',btn_channel:'Our Channel',btn_howto:'How to Connect'},
+  proxies:{label:'Locations',title:'Connect',desc:'Choose a country and tap "Connect".',connect:'Connect ->',online:'Online'},
+  pub:{title:'Public proxies',loading:'Loading list…',error:'Failed to load the list.'},
+  pin:{title:'Keep the site handy',desc:"Add this page to your home screen so you don't lose quick access to the server list.",install:'Add to Home Screen'},
+  faq:{label:'FAQ',title:'Frequently Asked Questions',items:[
+    {q:'What is MTProto Proxy?',a:"MTProto is Telegram's protocol. A special proxy server routes the messenger's traffic through a chosen node, improving stability."},
+    {q:'Is it safe?',a:"MTProto proxies cannot see your messages — all traffic is encrypted using Telegram's MTProto protocol."},
     {q:'Why did the proxy stop working?',a:'Servers can be blocked by ISPs. We regularly update the list.'},
     {q:'Is it free?',a:'Yes. All proxies are provided for free.'},
     {q:'Which devices are supported?',a:'All of them: Android, iOS, Windows, macOS, Linux.'}
   ]},
-  howto: { title:'How to Connect', desc:'Step-by-step guide for any device', steps:[
+  howto:{title:'How to Connect',desc:'Step-by-step guide for any device',steps:[
     {title:'Tap "Connect"',text:'On the home page, choose a proxy and tap the button. Telegram will open automatically.'},
     {title:'Confirm connection',text:'In the Telegram dialog, tap "Connect Proxy".'},
     {title:'Done',text:'The proxy is active. If unstable — try another server.'}
-  ], manual_title:'Manual Setup', manual_text:'Open Telegram → Settings → Data and Storage → Connection Type → Use Proxy → Add Proxy. Select type "MTProto" and enter server details.' },
-  about: { title:'About', desc:'We maintain an up-to-date list of public MTProto proxies for quick Telegram connection.',
-    blocks:[
-      {icon:'shield',t:'What is MTProto Proxy',p:'MTProto is Telegram\'s protocol. A proxy server routes traffic through a chosen node, improving connection stability.'},
-      {icon:'info',t:'How to use the catalog',p:'No registration required: open the home page, choose a country and tap "Connect".'},
-      {icon:'refresh',t:'Updates',p:'New servers and announcements are published in the official channel.'},
-      {icon:'server',t:'Disclaimer',p:'Proxies are provided for free and "as is". Assess the risks before use.'}
-    ]},
-  pwa: { title:'Add to Home Screen', desc:'Quick access to proxies with one tap', sections:[
-    {title:'iPhone / iPad (Safari)',steps:[
-      {title:'Open the site in Safari',desc:'Must be Safari — won\'t work from Chrome.'},
-      {title:'Tap "Share"',desc:'The square icon with an arrow at the bottom.'},
-      {title:'Select "Add to Home Screen"',desc:'Scroll and tap it. Confirm.'}
-    ]},
-    {title:'Android (Chrome)',steps:[
-      {title:'Open in Chrome',desc:'Or any Chromium browser.'},
-      {title:'Open the menu',desc:'Three dots in the top-right.'},
-      {title:'Tap "Add to Home Screen"',desc:'Confirm — shortcut will appear.'}
-    ]}
+  ],manual_title:'Manual Setup',manual_text:'Open Telegram → Settings → Data and Storage → Connection Type → Use Proxy → Add Proxy. Select type "MTProto" and enter server details.'},
+  about:{title:'About',desc:'We maintain an up-to-date list of public MTProto proxies for quick Telegram connection.',blocks:[
+    {icon:'shield',t:'What is MTProto Proxy',p:"MTProto is Telegram's protocol. A proxy server routes traffic through a chosen node, improving connection stability."},
+    {icon:'info',t:'How to use the catalog',p:'No registration required: open the home page, choose a country and tap "Connect".'},
+    {icon:'refresh',t:'Updates',p:'New servers and announcements are published in the official channel.'},
+    {icon:'server',t:'Disclaimer',p:'Proxies are provided for free and "as is". Assess the risks before use.'}
   ]},
-  contacts: { title:'Contacts', desc:'Get in touch', text:'Questions, suggestions, proxy requests — in our Telegram channel.', btn:'Open Telegram Channel' },
-  footer: { copy:'2026 © MTProxy for Telegram. All rights reserved. Proxies provided "as is".' },
-  seo: { title:'Free MTProto Proxy for Telegram — Fast & Secure', paragraphs:[
-    'MTProxy is a free MTProto proxy service for Telegram. Our servers are located across Europe and provide stable, high-speed connections.',
-    'MTProto is a protocol by the Telegram team for fast and secure data transfer. Unlike VPNs, it only handles Telegram traffic.',
-    'If Telegram is blocked by your ISP — use our proxies to bypass restrictions. The server list is regularly updated.'
-  ]}
+  pwa:{title:'Add to Home Screen',desc:'Quick access to proxies with one tap',sections:[
+    {title:'iPhone / iPad (Safari)',steps:[{title:'Open the site in Safari',desc:"Must be Safari — won't work from Chrome."},{title:'Tap "Share"',desc:'The square icon with an arrow at the bottom.'},{title:'Select "Add to Home Screen"',desc:'Scroll and tap it. Confirm.'}]},
+    {title:'Android (Chrome)',steps:[{title:'Open in Chrome',desc:'Or any Chromium browser.'},{title:'Open the menu',desc:'Three dots in the top-right.'},{title:'Tap "Add to Home Screen"',desc:'Confirm — shortcut will appear.'}]}
+  ]},
+  contacts:{title:'Contacts',desc:'Get in touch',text:'Questions, suggestions, proxy requests — in our Telegram channel.',btn:'Open Telegram Channel'},
+  footer:{copy:'2026 © MTProxy for Telegram. All rights reserved. Proxies provided "as is".'},
+  seo:{title:'Free MTProto Proxy for Telegram — Fast & Secure',paragraphs:['MTProxy is a free MTProto proxy service for Telegram. Our servers are located across Europe and provide stable, high-speed connections.','MTProto is a protocol by the Telegram team for fast and secure data transfer. Unlike VPNs, it only handles Telegram traffic.','If Telegram is blocked by your ISP — use our proxies to bypass restrictions. The server list is regularly updated.']}
 },
-ir: {
-  nav: { home:'خانه', howto:'نحوه اتصال', about:'درباره', pwa:'افزودن به صفحه', contacts:'تماس' },
-  hero: { badge:'پروکسی رایگان', title:'دسترسی سریع به ', titleAccent:'تلگرام', desc:'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.', btn_channel:'کانال ما', btn_howto:'نحوه اتصال' },
-  proxies: { label:'مکان‌ها', title:'اتصال', desc:'کشور را انتخاب کنید و روی «اتصال» بزنید.', connect:'اتصال', online:'آنلاین' },
-  pin: { title:'سایت را در دسترس نگه دارید', desc:'برای حفظ دسترسی سریع به لیست سرورها، سایت را به صفحه اصلی اضافه کنید.', install:'افزودن به صفحه اصلی' },
-  faq: { label:'سوالات متداول', title:'سوالات متداول', items:[
+ir:{
+  nav:{home:'خانه',howto:'نحوه اتصال',about:'درباره',pwa:'افزودن به صفحه',contacts:'تماس'},
+  hero:{badge:'پروکسی رایگان',title:'دسترسی سریع به ',titleAccent:'تلگرام',desc:'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.',btn_channel:'کانال ما',btn_howto:'نحوه اتصال'},
+  proxies:{label:'مکان‌ها',title:'اتصال',desc:'کشور را انتخاب کنید و روی «اتصال» بزنید.',connect:'اتصال',online:'آنلاین'},
+  pub:{title:'پروکسی‌های عمومی',loading:'در حال بارگذاری لیست…',error:'بارگذاری لیست ناموفق بود.'},
+  pin:{title:'سایت را در دسترس نگه دارید',desc:'برای حفظ دسترسی سریع به لیست سرورها، سایت را به صفحه اصلی اضافه کنید.',install:'افزودن به صفحه اصلی'},
+  faq:{label:'سوالات متداول',title:'سوالات متداول',items:[
     {q:'پروکسی MTProto چیست؟',a:'MTProto پروتکل تلگرام است. یک سرور پروکسی ویژه ترافیک پیام‌رسان را هدایت می‌کند.'},
     {q:'آیا امن است؟',a:'پروکسی‌های MTProto محتوای پیام‌های شما را نمی‌بینند — تمام ترافیک رمزگذاری شده است.'},
     {q:'چرا پروکسی کار نمی‌کند؟',a:'سرورها ممکن است توسط ISP مسدود شوند. ما لیست را مرتباً به‌روزرسانی می‌کنیم.'},
     {q:'آیا رایگان است؟',a:'بله. همه پروکسی‌ها رایگان هستند.'},
     {q:'کدام دستگاه‌ها پشتیبانی می‌شوند؟',a:'همه: اندروید، iOS، ویندوز، مک، لینوکس.'}
   ]},
-  howto: { title:'نحوه اتصال', desc:'راهنمای گام به گام برای هر دستگاه', steps:[
+  howto:{title:'نحوه اتصال',desc:'راهنمای گام به گام برای هر دستگاه',steps:[
     {title:'روی «اتصال» بزنید',text:'در صفحه اصلی یک پروکسی انتخاب کنید و دکمه را بزنید.'},
     {title:'اتصال را تأیید کنید',text:'در پنجره تلگرام روی «اتصال پروکسی» بزنید.'},
     {title:'تمام',text:'پروکسی فعال است. اگر ناپایدار است — سرور دیگری را امتحان کنید.'}
-  ], manual_title:'تنظیم دستی', manual_text:'تلگرام ← تنظیمات ← داده و ذخیره‌سازی ← نوع اتصال ← استفاده از پروکسی ← افزودن پروکسی. نوع «MTProto» را انتخاب کنید.' },
-  about: { title:'درباره سرویس', desc:'ما فهرست به‌روزی از پروکسی‌های عمومی MTProto را نگهداری می‌کنیم.',
-    blocks:[
-      {icon:'shield',t:'پروکسی MTProto چیست',p:'MTProto پروتکل تلگرام است. یک سرور پروکسی ویژه ترافیک را هدایت می‌کند.'},
-      {icon:'info',t:'نحوه استفاده از کاتالوگ',p:'ثبت‌نام لازم نیست: صفحه اصلی را باز کنید و روی «اتصال» بزنید.'},
-      {icon:'refresh',t:'به‌روزرسانی‌ها',p:'سرورهای جدید در کانال رسمی منتشر می‌شوند.'},
-      {icon:'server',t:'مسئولیت',p:'پروکسی‌ها رایگان و «همان‌طور که هست» ارائه می‌شوند.'}
-    ]},
-  pwa: { title:'افزودن به صفحه اصلی', desc:'دسترسی سریع با یک ضربه', sections:[
-    {title:'iPhone / iPad (Safari)',steps:[
-      {title:'سایت را در Safari باز کنید',desc:'حتماً در Safari — از Chrome کار نمی‌کند.'},
-      {title:'روی «اشتراک‌گذاری» بزنید',desc:'آیکون مربع با فلش در پایین صفحه.'},
-      {title:'«افزودن به صفحه اصلی» را انتخاب کنید',desc:'لیست را پایین بکشید و بزنید.'}
-    ]},
-    {title:'Android (Chrome)',steps:[
-      {title:'سایت را در Chrome باز کنید',desc:'یا هر مرورگر مبتنی بر Chromium.'},
-      {title:'منو را باز کنید',desc:'سه نقطه در گوشه بالا سمت راست.'},
-      {title:'«افزودن به صفحه اصلی» را بزنید',desc:'تأیید کنید.'}
-    ]}
+  ],manual_title:'تنظیم دستی',manual_text:'تلگرام ← تنظیمات ← داده و ذخیره‌سازی ← نوع اتصال ← استفاده از پروکسی ← افزودن پروکسی. نوع «MTProto» را انتخاب کنید.'},
+  about:{title:'درباره سرویس',desc:'ما فهرست به‌روزی از پروکسی‌های عمومی MTProto را نگهداری می‌کنیم.',blocks:[
+    {icon:'shield',t:'پروکسی MTProto چیست',p:'MTProto پروتکل تلگرام است. یک سرور پروکسی ویژه ترافیک را هدایت می‌کند.'},
+    {icon:'info',t:'نحوه استفاده از کاتالوگ',p:'ثبت‌نام لازم نیست: صفحه اصلی را باز کنید و روی «اتصال» بزنید.'},
+    {icon:'refresh',t:'به‌روزرسانی‌ها',p:'سرورهای جدید در کانال رسمی منتشر می‌شوند.'},
+    {icon:'server',t:'مسئولیت',p:'پروکسی‌ها رایگان و «همان‌طور که هست» ارائه می‌شوند.'}
   ]},
-  contacts: { title:'تماس', desc:'با ما در ارتباط باشید', text:'تمام سوالات و پیشنهادات — در کانال تلگرام ما.', btn:'باز کردن کانال تلگرام' },
-  footer: { copy:'2026 © MTProxy for Telegram. تمام حقوق محفوظ است.' },
-  seo: { title:'پروکسی رایگان MTProto برای تلگرام — سریع و امن', paragraphs:[
-    'MTProxy یک سرویس پروکسی رایگان MTProto برای پیام‌رسان تلگرام است. سرورهای ما در اروپا قرار دارند.',
-    'MTProto پروتکلی است که توسط تیم تلگرام برای انتقال سریع و امن داده‌ها توسعه داده شده است.',
-    'اگر تلگرام مسدود شده — از پروکسی‌های ما برای دور زدن فیلتر استفاده کنید.'
-  ]}
+  pwa:{title:'افزودن به صفحه اصلی',desc:'دسترسی سریع با یک ضربه',sections:[
+    {title:'iPhone / iPad (Safari)',steps:[{title:'سایت را در Safari باز کنید',desc:'حتماً در Safari — از Chrome کار نمی‌کند.'},{title:'روی «اشتراک‌گذاری» بزنید',desc:'آیکون مربع با فلش در پایین صفحه.'},{title:'«افزودن به صفحه اصلی» را انتخاب کنید',desc:'لیست را پایین بکشید و بزنید.'}]},
+    {title:'Android (Chrome)',steps:[{title:'سایت را در Chrome باز کنید',desc:'یا هر مرورگر مبتنی بر Chromium.'},{title:'منو را باز کنید',desc:'سه نقطه در گوشه بالا سمت راست.'},{title:'«افزودن به صفحه اصلی» را بزنید',desc:'تأیید کنید.'}]}
+  ]},
+  contacts:{title:'تماس',desc:'با ما در ارتباط باشید',text:'تمام سوالات و پیشنهادات — در کانال تلگرام ما.',btn:'باز کردن کانال تلگرام'},
+  footer:{copy:'2026 © MTProxy for Telegram. تمام حقوق محفوظ است.'},
+  seo:{title:'پروکسی رایگان MTProto برای تلگرام — سریع و امن',paragraphs:['MTProxy یک سرویس پروکسی رایگان MTProto برای پیام‌رسان تلگرام است. سرورهای ما در اروپا قرار دارند.','MTProto پروتکلی است که توسط تیم تلگرام برای انتقال سریع و امن داده‌ها توسعه داده شده است.','اگر تلگرام مسدود شده — از پروکسی‌های ما برای دور زدن فیلتر استفاده کنید.']}
 }
 };
 
 // ============ FLAGS ============
-function flagImg(code) {
-  return '<img src="https://flagcdn.com/w80/'+code.toLowerCase()+'.png" width="32" height="21" alt="'+code+'" style="border-radius:3px;display:block" onerror="this.style.display=\'none\'">';
-}
+function flagImg(c){return '<img src="https://flagcdn.com/w80/'+c.toLowerCase()+'.png" width="32" height="21" alt="'+c+'" style="border-radius:3px;display:block" onerror="this.style.display=\'none\'">';}
 
-// ============ PROXIES DATA ============
-let PROXY_LIST = [
-  {
-    "geo": "NL",
-    "name": "Netherlands",
-    "server": "144.31.237.90",
-    "port": 2050,
-    "secret": "ee3c9444b211c71301559aae25c40bfa506d61782e7275"
-  },
-  {
-    "geo": "SE",
-    "name": "Sweden",
-    "server": "81.90.21.194",
-    "port": 2050,
-    "secret": "ee6c14ca412a0f890e565c80e9ff15c6e2766b2e7275"
-  }, 
-  {
-    "geo": "DE",
-    "name": "Germany",
-    "server": "81.90.25.56",
-    "port": 2050,
-    "secret": "eec1e884c90e92ca15fbc4249868595ce4766b2e7275"
-  },
-  {
-    "geo": "PL",
-    "name": "Poland",
-    "server": "178.215.239.11",
-    "port": 2050,
-    "secret": "ee14fdb589b677f17cbe925fc0c04fcad1766b2e636f6d"
-  },
-  {
-    "geo": "FI",
-    "name": "Finland",
-    "server": "138.124.7.76",
-    "port": 2050,
-    "secret": "ee138aa3fa0395b3719b03b4edd9846ec17777772e7362657262616e6b2e7275"
-  }
+// ============ PROXIES ============
+const PROXY_LIST=[
+  {geo:"NL",name:"Netherlands",server:"144.31.237.90",port:2050,secret:"ee3c9444b211c71301559aae25c40bfa506d61782e7275"},
+  {geo:"SE",name:"Sweden",server:"81.90.21.194",port:2050,secret:"ee6c14ca412a0f890e565c80e9ff15c6e2766b2e7275"},
+  {geo:"DE",name:"Germany",server:"81.90.25.56",port:2050,secret:"eec1e884c90e92ca15fbc4249868595ce4766b2e7275"},
+  {geo:"PL",name:"Poland",server:"178.215.239.11",port:2050,secret:"ee14fdb589b677f17cbe925fc0c04fcad1766b2e636f6d"},
+  {geo:"FI",name:"Finland",server:"138.124.7.76",port:2050,secret:"ee138aa3fa0395b3719b03b4edd9846ec17777772e7362657262616e6b2e7275"}
 ];
 
 // ============ STATE ============
-let lang = 'ru';
-let currentView = 'home';
-let proxies = PROXY_LIST;
+let lang='ru',currentView='home',proxies=PROXY_LIST;
+let pubProxies=[],pubLoaded=false,pubLoading=false;
 
 // ============ INIT ============
-(function init() {
-  // Restore lang
-  try { const s = localStorage.getItem('mtproxy_lang'); if (s && T[s]) lang = s; } catch(e){}
-
-  // Check URL hash for view
-  const hash = location.hash.replace('#','');
-  if (['home','howto','about','pwa','contacts'].includes(hash)) currentView = hash;
-
+(function(){
+  try{const s=localStorage.getItem('mtproxy_lang');if(s&&T[s])lang=s;}catch(e){}
+  const h=location.hash.replace('#','');
+  if(['home','howto','about','pwa','contacts'].includes(h))currentView=h;
   render();
-
 })();
 
 // ============ NAVIGATION ============
-function navigate(view) {
-  currentView = view;
-  location.hash = view === 'home' ? '' : view;
-  closeMobile();
-  render();
-  window.scrollTo(0,0);
+function navigate(v){currentView=v;location.hash=v==='home'?'':v;closeMobile();render();window.scrollTo(0,0);}
+function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+
+// ============ PUBLIC PROXIES ============
+const PUB_URL='https://raw.githubusercontent.com/hookzof/socks5_list/refs/heads/master/tg/mtproto.json';
+
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+
+function togglePublicProxies(){
+  const el=document.getElementById('pubSpoiler');
+  el.classList.toggle('open');
+  if(el.classList.contains('open')&&!pubLoaded&&!pubLoading)loadPublicProxies();
 }
 
-function toggleMobile() {
-  document.getElementById('mobileMenu').classList.toggle('open');
+function loadPublicProxies(){
+  const t=T[lang];
+  const body=document.getElementById('pubBody');
+  pubLoading=true;
+  body.innerHTML='<div class="pub-spoiler-loader"><div class="pub-spinner"></div><span>'+esc(t.pub.loading)+'</span></div>';
+
+  fetch(PUB_URL)
+    .then(r=>r.json())
+    .then(data=>{
+      pubProxies=shuffle(data.map(p=>({geo:p.country,server:p.host,port:p.port,secret:p.secret})));
+      pubLoaded=true;
+      pubLoading=false;
+      const cnt=document.getElementById('pubCount');
+      cnt.textContent=pubProxies.length;
+      cnt.style.display='';
+      renderPublicGrid();
+    })
+    .catch(()=>{
+      pubLoading=false;
+      body.innerHTML='<div style="text-align:center;padding:24px 0;color:#5b6b7b;font-size:14px">'+esc(t.pub.error)+'</div>';
+    });
 }
-function closeMobile() {
-  document.getElementById('mobileMenu').classList.remove('open');
+
+function renderPublicGrid(){
+  const t=T[lang];
+  const body=document.getElementById('pubBody');
+  body.innerHTML='<div class="proxy-grid">'+pubProxies.map(p=>
+    '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name" title="'+esc(p.server)+'">'+esc(p.server)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag">:'+p.port+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect">'+esc(t.proxies.connect)+'</a></div>'
+  ).join('')+'</div>';
 }
 
 // ============ RENDER ============
-function render() {
-  const t = T[lang];
-  const isRTL = lang === 'ir';
-  document.documentElement.lang = isRTL ? 'fa' : lang;
-  document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+function render(){
+  const t=T[lang];
+  const isRTL=lang==='ir';
+  document.documentElement.lang=isRTL?'fa':lang;
+  document.documentElement.dir=isRTL?'rtl':'ltr';
 
-  // Views
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  const el = document.getElementById('view-' + currentView);
-  if (el) el.classList.add('active');
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const el=document.getElementById('view-'+currentView);
+  if(el)el.classList.add('active');
 
-  // i18n text nodes
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = key.split('.').reduce((o,k) => o && o[k], t);
-    if (val) el.textContent = val;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    const val=key.split('.').reduce((o,k)=>o&&o[k],t);
+    if(val)el.textContent=val;
   });
 
-  // Desktop nav
-  const navKeys = ['home','howto','about','pwa','contacts'];
-  const desktopNav = document.getElementById('desktopNav');
-  desktopNav.innerHTML = navKeys.map(k =>
-    `<a href="#${k === 'home' ? '' : k}" class="nav-link${currentView === k ? ' active' : ''}" onclick="navigate('${k}');return false">${t.nav[k]}</a>`
-  ).join('') +
-  `<div class="lang-switch">` +
-    ['ru','en','ir'].map(l =>
-      `<button class="lang-btn${lang===l?' active':''}" onclick="setLang('${l}')">${l.toUpperCase()}</button>`
-    ).join('') +
-  `</div>`;
+  const navKeys=['home','howto','about','pwa','contacts'];
+  const langBtns='<div class="lang-switch">'+['ru','en','ir'].map(l=>'<button class="lang-btn'+(lang===l?' active':'')+'" onclick="setLang(\''+l+'\')">'+l.toUpperCase()+'</button>').join('')+'</div>';
 
-  // Mobile menu
-  const mobile = document.getElementById('mobileMenu');
-  mobile.innerHTML = navKeys.map(k =>
-    `<a href="#${k === 'home' ? '' : k}" class="nav-link${currentView === k ? ' active' : ''}" onclick="navigate('${k}');return false">${t.nav[k]}</a>`
-  ).join('') +
-  `<div class="lang-switch" style="margin:16px 0 0;justify-content:center">` +
-    ['ru','en','ir'].map(l =>
-      `<button class="lang-btn${lang===l?' active':''}" onclick="setLang('${l}')">${l.toUpperCase()}</button>`
-    ).join('') +
-  `</div>`;
+  document.getElementById('desktopNav').innerHTML=navKeys.map(k=>'<a href="#'+(k==='home'?'':k)+'" class="nav-link'+(currentView===k?' active':'')+'" onclick="navigate(\''+k+'\');return false">'+t.nav[k]+'</a>').join('')+langBtns;
 
-  // Footer links
-  document.getElementById('footerLinks').innerHTML = navKeys.map(k =>
-    `<a href="#${k === 'home' ? '' : k}" onclick="navigate('${k}');return false">${t.nav[k]}</a>`
-  ).join('');
+  const mobile=document.getElementById('mobileMenu');
+  mobile.innerHTML=navKeys.map(k=>'<a href="#'+(k==='home'?'':k)+'" class="nav-link'+(currentView===k?' active':'')+'" onclick="navigate(\''+k+'\');return false">'+t.nav[k]+'</a>').join('')+'<div class="lang-switch" style="margin:16px 0 0;justify-content:center">'+['ru','en','ir'].map(l=>'<button class="lang-btn'+(lang===l?' active':'')+'" onclick="setLang(\''+l+'\')">'+l.toUpperCase()+'</button>').join('')+'</div>';
+
+  document.getElementById('footerLinks').innerHTML=navKeys.map(k=>'<a href="#'+(k==='home'?'':k)+'" onclick="navigate(\''+k+'\');return false">'+t.nav[k]+'</a>').join('');
 
   renderProxies();
-  renderFAQ();
-  renderHowto();
-  renderAbout();
-  renderPWA();
-  renderSEO();
+  if(pubLoaded)renderPublicGrid();
+  renderFAQ();renderHowto();renderAbout();renderPWA();renderSEO();
 }
 
-function renderProxies() {
-  const t = T[lang];
-  const grid = document.getElementById('proxyGrid');
-  grid.innerHTML = proxies.map(p =>
-    `<div class="proxy-card">
-      <div class="proxy-info">
-        <div class="proxy-flag">${flagImg(p.geo)}</div>
-        <div class="proxy-meta">
-          <div class="proxy-name">${esc(p.name)}</div>
-          <div class="proxy-details">
-            <span class="proxy-tag">${esc(p.geo)}</span>
-            <span class="proxy-tag online"><span class="proxy-status"></span>${t.proxies.online}</span>
-          </div>
-        </div>
-      </div>
-      <a href="tg://proxy?server=${esc(p.server)}&port=${p.port}&secret=${esc(p.secret)}" class="btn-connect">${t.proxies.connect}</a>
-    </div>`
+function renderProxies(){
+  const t=T[lang];
+  document.getElementById('proxyGrid').innerHTML=proxies.map(p=>
+    '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name">'+esc(p.name)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag online"><span class="proxy-status"></span>'+t.proxies.online+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect">'+t.proxies.connect+'</a></div>'
   ).join('');
 }
 
-function renderFAQ() {
-  const items = T[lang].faq.items;
-  const list = document.getElementById('faqList');
-  list.innerHTML = items.map((item,i) =>
-    `<div class="faq-item" onclick="toggleFAQ(this)">
-      <div class="faq-q"><span>${esc(item.q)}</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-      <div class="faq-a">${esc(item.a)}</div>
-    </div>`
-  ).join('');
+function renderFAQ(){
+  const items=T[lang].faq.items;
+  document.getElementById('faqList').innerHTML=items.map(i=>'<div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>'+esc(i.q)+'</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a">'+esc(i.a)+'</div></div>').join('');
+  let s=document.getElementById('faqSchema');
+  if(!s){s=document.createElement('script');s.type='application/ld+json';s.id='faqSchema';document.head.appendChild(s);}
+  s.textContent=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:items.map(i=>({'@type':'Question',name:i.q,acceptedAnswer:{'@type':'Answer',text:i.a}}))});
+}
+function toggleFAQ(el){el.classList.toggle('open');}
 
-  // FAQ Schema
-  let schemaEl = document.getElementById('faqSchema');
-  if (!schemaEl) { schemaEl = document.createElement('script'); schemaEl.type = 'application/ld+json'; schemaEl.id = 'faqSchema'; document.head.appendChild(schemaEl); }
-  schemaEl.textContent = JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:items.map(i=>({'@type':'Question',name:i.q,acceptedAnswer:{'@type':'Answer',text:i.a}}))});
+function renderHowto(){
+  const h=T[lang].howto;
+  document.getElementById('howtoSteps').innerHTML=h.steps.map((s,i)=>'<div class="content-block"><h3><span class="step-num">'+(i+1)+'</span>'+esc(s.title)+'</h3><p>'+esc(s.text)+'</p></div>').join('');
+}
+function renderAbout(){
+  const a=T[lang].about;
+  document.getElementById('aboutBlocks').innerHTML=a.blocks.map(b=>'<div class="content-block"><h3><span class="icon-inline">'+getIcon(b.icon)+'</span>'+esc(b.t)+'</h3><p>'+esc(b.p)+'</p></div>').join('');
+}
+function renderPWA(){
+  const p=T[lang].pwa;
+  document.getElementById('pwaSections').innerHTML=p.sections.map(sec=>'<div class="content-block"><h3>'+esc(sec.title)+'</h3><div class="pwa-steps">'+sec.steps.map((s,i)=>'<div class="pwa-step"><div class="pwa-step-num">'+(i+1)+'</div><div><h4>'+esc(s.title)+'</h4><p>'+esc(s.desc)+'</p></div></div>').join('')+'</div></div>').join('');
+}
+function renderSEO(){
+  const s=T[lang].seo;
+  document.getElementById('seoBlock').innerHTML='<h2>'+esc(s.title)+'</h2>'+s.paragraphs.map(p=>'<p>'+esc(p)+'</p>').join('');
 }
 
-function toggleFAQ(el) { el.classList.toggle('open'); }
-
-function renderHowto() {
-  const h = T[lang].howto;
-  document.getElementById('howtoSteps').innerHTML = h.steps.map((s,i) =>
-    `<div class="content-block"><h3><span class="step-num">${i+1}</span>${esc(s.title)}</h3><p>${esc(s.text)}</p></div>`
-  ).join('');
+function getIcon(n){
+  const i={shield:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',info:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>',refresh:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>',server:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>'};
+  return i[n]||'';
 }
 
-function renderAbout() {
-  const a = T[lang].about;
-  document.getElementById('aboutBlocks').innerHTML = a.blocks.map(b =>
-    `<div class="content-block"><h3><span class="icon-inline">${getIcon(b.icon)}</span>${esc(b.t)}</h3><p>${esc(b.p)}</p></div>`
-  ).join('');
-}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function setLang(l){lang=l;try{localStorage.setItem('mtproxy_lang',l);}catch(e){}render();}
 
-function renderPWA() {
-  const p = T[lang].pwa;
-  document.getElementById('pwaSections').innerHTML = p.sections.map(sec =>
-    `<div class="content-block"><h3>${esc(sec.title)}</h3><div class="pwa-steps">${
-      sec.steps.map((s,i) =>
-        `<div class="pwa-step"><div class="pwa-step-num">${i+1}</div><div><h4>${esc(s.title)}</h4><p>${esc(s.desc)}</p></div></div>`
-      ).join('')
-    }</div></div>`
-  ).join('');
-}
-
-function renderSEO() {
-  const s = T[lang].seo;
-  document.getElementById('seoBlock').innerHTML =
-    `<h2>${esc(s.title)}</h2>` + s.paragraphs.map(p => `<p>${esc(p)}</p>`).join('');
-}
-
-function getIcon(name) {
-  const icons = {
-    shield: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
-    info: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>',
-    refresh: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>',
-    server: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>'
-  };
-  return icons[name] || '';
-}
-
-function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-
-function setLang(l) {
-  lang = l;
-  try { localStorage.setItem('mtproxy_lang', l); } catch(e){}
-  render();
-}
-
-// ============ HASH CHANGE ============
-window.addEventListener('hashchange', () => {
-  const hash = location.hash.replace('#','') || 'home';
-  if (['home','howto','about','pwa','contacts'].includes(hash)) {
-    currentView = hash;
-    render();
-    window.scrollTo(0,0);
-  }
+window.addEventListener('hashchange',()=>{
+  const h=location.hash.replace('#','')||'home';
+  if(['home','howto','about','pwa','contacts'].includes(h)){currentView=h;render();window.scrollTo(0,0);}
 });
 </script>
 
-<!-- Analytics -->
 <script>
 (function(){
   var ids={'mtproxy.tg':'6084685b56d3','mtproxytg.vercel.app':'1dadaf455d89','mtproxytg.netlify.app':'9f85901bba87'};
