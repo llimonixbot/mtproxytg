@@ -3,35 +3,35 @@
     "geo": "NL",
     "name": "Netherlands",
     "server": "144.31.237.90",
-    "port": 2048,
+    "port": 2050,
     "secret": "ee3c9444b211c71301559aae25c40bfa506d61782e7275"
   },
   {
     "geo": "SE",
     "name": "Sweden",
     "server": "81.90.21.194",
-    "port": 2048,
+    "port": 2050,
     "secret": "ee6c14ca412a0f890e565c80e9ff15c6e2766b2e7275"
   }, 
   {
     "geo": "DE",
     "name": "Germany",
     "server": "81.90.25.56",
-    "port": 2048,
+    "port": 2050,
     "secret": "eec1e884c90e92ca15fbc4249868595ce4766b2e7275"
   },
   {
     "geo": "PL",
     "name": "Poland",
     "server": "178.215.239.11",
-    "port": 2048,
+    "port": 2050,
     "secret": "ee14fdb589b677f17cbe925fc0c04fcad1766b2e636f6d"
   },
   {
     "geo": "FI",
     "name": "Finland",
     "server": "138.124.7.76",
-    "port": 2048,
+    "port": 2050,
     "secret": "ee138aa3fa0395b3719b03b4edd9846ec17777772e7362657262616e6b2e7275"
   }
 ]
