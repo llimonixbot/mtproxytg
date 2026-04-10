@@ -6,6 +6,7 @@ const SITE_IDS: Record<string, string> = {
   'mtproxy.tg': '6084685b56d3',
   'mtproxytg.vercel.app': '1dadaf455d89',
   'mtproxytg.netlify.app': '9f85901bba87',
+  'mtproxytg2.vercel.app':'9ccfb481c564',
 };
 
 const DEFAULT_SITE_ID = '6084685b56d3';
