@@ -8,7 +8,7 @@ import FlagIcon from './FlagIcon';
 import { IconChevron, IconGlobe } from './Icons';
 
 const GITHUB_URL =
-  'https://raw.githubusercontent.com/hookzof/socks5_list/refs/heads/master/tg/mtproto.json';
+  'https://raw.githubusercontent.com/nellimonix/mtproxy_list/refs/heads/main/mtproxy.json';
 
 interface RawProxy {
   host: string;
