@@ -34,20 +34,6 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // proxies.json — network-first (needs fresh data), short cache fallback
-  if (url.pathname === '/proxies.json') {
-    event.respondWith(
-      fetch(event.request)
-        .then((res) => {
-          const clone = res.clone();
-          caches.open(CACHE_NAME).then((c) => c.put(event.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(event.request))
-    );
-    return;
-  }
-
   // Static assets & _next chunks — cache-first (they have hashed filenames)
   if (
     STATIC_ASSETS.some((a) => url.pathname === a) ||

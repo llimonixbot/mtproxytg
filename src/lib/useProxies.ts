@@ -45,7 +45,7 @@ export function useProxies() {
     if (fetched.current) return;
     fetched.current = true;
 
-    fetch('/proxies.json')
+    fetch('https://raw.githubusercontent.com/llimonixbot/mtproxytg/refs/heads/files/proxies.json')
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
