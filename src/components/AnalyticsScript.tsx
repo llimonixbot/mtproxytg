@@ -2,18 +2,12 @@
 
 import Script from 'next/script';
 
-const SITE_IDS: Record<string, string> = {
-  'mtproxy.tg': '6084685b56d3',
-  'mtproxytg2.vercel.app': '1dadaf455d89',
-  'mtproxytg.netlify.app': '9f85901bba87',
-};
-
-const DEFAULT_SITE_ID = '6084685b56d3';
+const DEFAULT_SITE_ID = '1dadaf455d89';
 
 export default function AnalyticsScript() {
   if (typeof window === 'undefined') return null;
 
-  const siteId = SITE_IDS[window.location.hostname] ?? DEFAULT_SITE_ID;
+  const siteId = DEFAULT_SITE_ID;
 
   return (
     <Script
