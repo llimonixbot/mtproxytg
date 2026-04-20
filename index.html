@@ -89,6 +89,8 @@ a:hover{color:var(--accent-hover)}
 .btn-primary:hover{background:var(--accent-hover);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(42,171,238,.3)}
 .btn-outline{background:transparent;color:var(--text-primary);border:1px solid var(--border-light)}
 .btn-outline:hover{background:var(--bg-surface);color:var(--text-primary);border-color:var(--text-muted)}
+.btn-danger{background:#e04e4e;color:#fff}
+.btn-danger:hover{background:#c93d3d;color:#fff}
 .btn-sm{padding:8px 16px;font-size:13px;border-radius:var(--radius-sm)}
 .btn-connect{background:var(--accent);color:#fff;padding:10px 20px;border-radius:var(--radius-sm);border:none;font-size:13px;font-weight:600;cursor:pointer;transition:var(--transition);font-family:var(--font);white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 .btn-connect:hover{background:var(--accent-hover);color:#fff;transform:translateY(-1px)}
@@ -223,6 +225,7 @@ a:hover{color:var(--accent-hover)}
         <span data-i18n="hero.btn_channel"></span>
       </a>
       <a href="#" class="btn btn-outline" onclick="navigate('howto');return false" data-i18n="hero.btn_howto"></a>
+      <a href="tg://resolve?domain=TriBukvyRoBot&start=mtp4tg_site" class="btn btn-danger" target="_blank" rel="noopener" data-i18n="hero.btn_custom"></a>
     </div>
   </section>
 
@@ -325,7 +328,7 @@ a:hover{color:var(--accent-hover)}
 const T={
 ru:{
   nav:{home:'Главная',howto:'Как подключить',about:'О сервисе',pwa:'На экран',contacts:'Контакты'},
-  hero:{badge:'Бесплатные прокси',title:'Быстрый доступ к ',titleAccent:'Telegram',desc:'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.',btn_channel:'Наш канал',btn_howto:'Как подключить'},
+  hero:{badge:'Бесплатные прокси',title:'Быстрый доступ к ',titleAccent:'Telegram',desc:'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.',btn_channel:'Наш канал',btn_howto:'Как подключить',btn_custom:'Oбxoд бeлыx cпискoв'},
   proxies:{label:'Локации',title:'Подключение',desc:'Выберите страну и нажмите «Подключить».',connect:'Подключить ->',online:'Онлайн'},
   pub:{title:'Публичные прокси',loading:'Загрузка списка…',error:'Не удалось загрузить список.'},
   pin:{title:'Сохраните сайт под рукой',desc:'Чтобы не потерять быстрый доступ к списку серверов, добавьте сайт на главный экран — открытие в один тап, без поиска во вкладках.',install:'Добавить на экран'},
@@ -357,7 +360,7 @@ ru:{
 },
 en:{
   nav:{home:'Home',howto:'How to Connect',about:'About',pwa:'Add to Screen',contacts:'Contacts'},
-  hero:{badge:'Free proxies',title:'Fast access to ',titleAccent:'Telegram',desc:'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.',btn_channel:'Our Channel',btn_howto:'How to Connect'},
+  hero:{badge:'Free proxies',title:'Fast access to ',titleAccent:'Telegram',desc:'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.',btn_channel:'Our Channel',btn_howto:'How to Connect',btn_custom:'Вураssing whitеlists'},
   proxies:{label:'Locations',title:'Connect',desc:'Choose a country and tap "Connect".',connect:'Connect ->',online:'Online'},
   pub:{title:'Public proxies',loading:'Loading list…',error:'Failed to load the list.'},
   pin:{title:'Keep the site handy',desc:"Add this page to your home screen so you don't lose quick access to the server list.",install:'Add to Home Screen'},
@@ -389,7 +392,7 @@ en:{
 },
 ir:{
   nav:{home:'خانه',howto:'نحوه اتصال',about:'درباره',pwa:'افزودن به صفحه',contacts:'تماس'},
-  hero:{badge:'پروکسی رایگان',title:'دسترسی سریع به ',titleAccent:'تلگرام',desc:'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.',btn_channel:'کانال ما',btn_howto:'نحوه اتصال'},
+  hero:{badge:'پروکسی رایگان',title:'دسترسی سریع به ',titleAccent:'تلگرام',desc:'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.',btn_channel:'کانال ما',btn_howto:'نحوه اتصال',btn_custom:'دور زدن لیست‌های سفید'},
   proxies:{label:'مکان‌ها',title:'اتصال',desc:'کشور را انتخاب کنید و روی «اتصال» بزنید.',connect:'اتصال',online:'آنلاین'},
   pub:{title:'پروکسی‌های عمومی',loading:'در حال بارگذاری لیست…',error:'بارگذاری لیست ناموفق بود.'},
   pin:{title:'سایت را در دسترس نگه دارید',desc:'برای حفظ دسترسی سریع به لیست سرورها، سایت را به صفحه اصلی اضافه کنید.',install:'افزودن به صفحه اصلی'},
