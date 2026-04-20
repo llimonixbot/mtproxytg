@@ -23,6 +23,7 @@ export interface HeroStrings {
   desc: string;
   btn_channel: string;
   btn_howto: string;
+  btn_custom: string;
 }
 
 export interface ProxiesStrings {

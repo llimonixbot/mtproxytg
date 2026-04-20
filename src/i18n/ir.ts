@@ -15,6 +15,7 @@ const ir: Translation = {
     desc: 'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.',
     btn_channel: 'کانال ما',
     btn_howto: 'نحوه اتصال',
+    btn_custom: 'دور زدن لیست سفید',
   },
   proxies: {
     label: 'مکان‌ها',

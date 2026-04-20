@@ -15,6 +15,7 @@ const ru: Translation = {
     desc: 'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.',
     btn_channel: 'Наш канал',
     btn_howto: 'Как подключить',
+    btn_custom: 'Oбxoд бeлыx cпиcкoв',
   },
   proxies: {
     label: 'Локации',

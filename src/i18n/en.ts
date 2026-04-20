@@ -15,6 +15,7 @@ const en: Translation = {
     desc: 'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.',
     btn_channel: 'Our Channel',
     btn_howto: 'How to Connect',
+    btn_custom: 'Вураss Whitеlists',
   },
   proxies: {
     label: 'Locations',

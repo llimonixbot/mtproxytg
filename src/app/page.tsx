@@ -10,6 +10,7 @@ import FAQ from '@/components/FAQ';
 import { IconBolt, IconGlobe, IconQuestion, IconTelegram } from '@/components/Icons';
 import InstallButton from '@/components/InstallButton';
 import SEOBlock from '@/components/SEOBlock';
+import CustomHeroButton from '@/components/CustomHeroButton';
 
 export default function HomePage() {
   const { t } = useI18n();
@@ -36,21 +37,7 @@ export default function HomePage() {
           <Link href="/howto" className="btn btn-outline" prefetch={false}>
             {t.hero.btn_howto}
           </Link>
-          {CUSTOM_HERO_BUTTON.enabled && (
-            <a
-              href={CUSTOM_HERO_BUTTON.url}
-              className="btn btn-custom-hero"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                '--custom-bg': CUSTOM_HERO_BUTTON.bgColor,
-                '--custom-bg-hover': CUSTOM_HERO_BUTTON.bgColorHover,
-                '--custom-text': CUSTOM_HERO_BUTTON.textColor,
-              } as React.CSSProperties}
-            >
-              {CUSTOM_HERO_BUTTON.text}
-            </a>
-          )}
+          <CustomHeroButton />
         </div>
       </section>
 
