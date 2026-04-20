@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useI18n } from '@/i18n';
-import { CHANNEL_URL } from '@/lib/constants';
+import { CHANNEL_URL, CUSTOM_HERO_BUTTON } from '@/lib/constants';
 import { useProxies } from '@/lib/useProxies';
 import ProxyCard from '@/components/ProxyCard';
 import PublicProxies from '@/components/PublicProxies';
@@ -36,6 +36,21 @@ export default function HomePage() {
           <Link href="/howto" className="btn btn-outline" prefetch={false}>
             {t.hero.btn_howto}
           </Link>
+          {CUSTOM_HERO_BUTTON.enabled && (
+            <a
+              href={CUSTOM_HERO_BUTTON.url}
+              className="btn btn-custom-hero"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                '--custom-bg': CUSTOM_HERO_BUTTON.bgColor,
+                '--custom-bg-hover': CUSTOM_HERO_BUTTON.bgColorHover,
+                '--custom-text': CUSTOM_HERO_BUTTON.textColor,
+              } as React.CSSProperties}
+            >
+              {CUSTOM_HERO_BUTTON.text}
+            </a>
+          )}
         </div>
       </section>
 
@@ -52,10 +67,11 @@ export default function HomePage() {
             <ProxyCard key={`${proxy.geo}-${i}`} proxy={proxy} />
           ))}
         </div>
-
-        {/* Public proxies spoiler */}
-        <PublicProxies />
+          
       </section>
+      
+      <PublicProxies />
+
 
       {/* Pin */}
       <section className="pin-section">

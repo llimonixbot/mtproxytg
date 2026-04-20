@@ -13,6 +13,15 @@ interface CacheEntry {
 // In-memory cache shared across hook instances in same session
 let memoryCache: CacheEntry | null = null;
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export function useProxies() {
   // Always start with DEFAULT_PROXIES for SSR/hydration consistency
   const [proxies, setProxies] = useState<Proxy[]>(DEFAULT_PROXIES);
@@ -22,7 +31,7 @@ export function useProxies() {
   useEffect(() => {
     // 1. Try memory cache (instant)
     if (memoryCache && Date.now() - memoryCache.ts < CACHE_TTL) {
-      setProxies(memoryCache.data);
+      setProxies(shuffle(memoryCache.data));
       setLoading(false);
       return;
     }
@@ -34,7 +43,7 @@ export function useProxies() {
         const cached: CacheEntry = JSON.parse(raw);
         if (Date.now() - cached.ts < CACHE_TTL && Array.isArray(cached.data) && cached.data.length > 0) {
           memoryCache = cached;
-          setProxies(cached.data);
+          setProxies(shuffle(cached.data));
           setLoading(false);
           return;
         }
@@ -54,7 +63,7 @@ export function useProxies() {
           try {
             localStorage.setItem(CACHE_KEY, JSON.stringify(entry));
           } catch {}
-          setProxies(data);
+          setProxies(shuffle(data));
         }
       })
       .catch(() => {})

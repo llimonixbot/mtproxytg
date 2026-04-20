@@ -882,3 +882,18 @@ a:hover {
   font-size: 12px !important;
   margin-top: 2px !important;
 }
+
+/* ===== CUSTOM HERO BUTTON ===== */
+/* Add this at the end of globals.css */
+
+.btn-custom-hero {
+  background: var(--custom-bg, #e04e4e);
+  color: var(--custom-text, #fff);
+}
+
+.btn-custom-hero:hover {
+  background: var(--custom-bg-hover, #c93d3d);
+  color: var(--custom-text, #fff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+}
