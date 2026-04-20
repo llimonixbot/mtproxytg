@@ -30,11 +30,11 @@ export default function HomePage() {
         </h1>
         <p>{t.hero.desc}</p>
         <div className="hero-actions">
-          <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-rybbit-event="channel_click">
             <IconTelegram size={16} />
             {t.hero.btn_channel}
           </a>
-          <Link href="/howto" className="btn btn-outline" prefetch={false}>
+          <Link href="/howto" className="btn btn-outline" prefetch={false} data-rybbit-event="howto_click">
             {t.hero.btn_howto}
           </Link>
           <CustomHeroButton />

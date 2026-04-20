@@ -24,6 +24,7 @@ export default function CustomHeroButton() {
         background: CUSTOM_HERO_BUTTON.bgColor,
         color: CUSTOM_HERO_BUTTON.textColor,
       }}
+      data-rybbit-event="custom_click"
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLAnchorElement).style.background = CUSTOM_HERO_BUTTON.bgColorHover;
       }}
