@@ -1,16 +1,16 @@
 [
   {
-    "geo": "FI",
-    "name": "Finland",
-    "server": "wasd.mtproxy.cfd",
+    "geo": "DE",
+    "name": "Germany #1",
+    "server": "help.mtproxy.cfd",
     "port": 443,
-    "secret": "ee7bf273a2a3a1123ca24807e1e3f60f0f77696c64626572726965732e7275"
+    "secret": "eef99ad48c39bf53f6cdb069fd53379a2978356d656469612e7275"
   },
   {
     "geo": "DE",
-    "name": "Germany",
-    "server": "wasd.mtproxy.cfd",
+    "name": "Germany #2",
+    "server": "help.mtproxy.cfd",
     "port": 443,
-    "secret": "ee7bf273a2a3a1123ca24807e1e3f60f0f77696c64626572726965732e7275"
+    "secret": "eef99ad48c39bf53f6cdb069fd53379a2978356d656469612e7275"
   }
 ]
