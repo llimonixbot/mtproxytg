@@ -11,7 +11,7 @@ export default function AnalyticsScript() {
 
   return (
     <Script
-      src="https://anltcs.llimonix.dev/api/script.js"
+      src="https://mtrcs.llimonix.dev/api/script.js"
       data-site-id={siteId}
       strategy="afterInteractive"
     />
