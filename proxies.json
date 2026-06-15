@@ -1,16 +1,1 @@
-[
-  {
-    "geo": "DE",
-    "name": "Germany #1",
-    "server": "help.mtproxy.cfd",
-    "port": 443,
-    "secret": "eef99ad48c39bf53f6cdb069fd53379a2978356d656469612e7275"
-  },
-  {
-    "geo": "DE",
-    "name": "Germany #2",
-    "server": "help.mtproxy.cfd",
-    "port": 443,
-    "secret": "eef99ad48c39bf53f6cdb069fd53379a2978356d656469612e7275"
-  }
-]
+[]
