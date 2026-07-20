@@ -106,6 +106,7 @@ a:hover{color:var(--accent-hover)}
 .proxy-card:hover{border-color:var(--border-light);background:var(--bg-surface-hover)}
 .proxy-info{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
 .proxy-flag{width:42px;height:42px;border-radius:10px;background:var(--bg-surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.proxy-flag img{width:32px;height:24px;object-fit:cover;border-radius:3px;display:block}
 .proxy-meta{min-width:0;flex:1}
 .proxy-name{font-weight:600;font-size:14px;margin-bottom:2px}
 .proxy-details{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -425,7 +426,7 @@ ir:{
 };
 
 // ============ FLAGS ============
-function flagImg(c){return '<img src="https://flagcdn.com/w80/'+c.toLowerCase()+'.png" width="32" height="21" alt="'+c+'" style="border-radius:3px;display:block" onerror="this.style.display=\'none\'">';}
+function flagImg(c){const code=String(c||'xx').toLowerCase().replace(/[^a-z-]/g,'');return '<img src="assets/flags/'+code+'.svg" width="32" height="24" alt="'+esc(c||'UN')+'" onerror="this.src=\'assets/flags/xx.svg\';this.onerror=null">';}
 
 // ============ PROXIES ============
 const PROXY_URL = 'https://raw.githubusercontent.com/llimonixbot/mtproxytg/refs/heads/files/proxies.json';
