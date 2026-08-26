@@ -112,7 +112,10 @@ a:hover{color:var(--accent-hover)}
 .proxy-details{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .proxy-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(42,171,238,.1);color:var(--accent);font-size:11px;font-weight:500}
 .proxy-tag.online{background:rgba(79,174,78,.1);color:var(--success)}
-.proxy-status{width:6px;height:6px;border-radius:50%;background:var(--success);display:inline-block;flex-shrink:0}
+.proxy-tag.unstable{background:rgba(245,158,11,.12);color:#d97706}
+.proxy-tag.offline{background:rgba(239,68,68,.1);color:#dc2626}
+.proxy-tag.checking{background:rgba(100,116,139,.1);color:#64748b}
+.proxy-status{width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;flex-shrink:0}
 
 /* ===== PUBLIC PROXIES SPOILER ===== */
 .pub-spoiler{margin-top:16px;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
@@ -330,7 +333,7 @@ const T={
 ru:{
   nav:{home:'Главная',howto:'Как подключить',about:'О сервисе',pwa:'На экран',contacts:'Контакты'},
   hero:{badge:'Бесплатные прокси',title:'Быстрый доступ к ',titleAccent:'Telegram',desc:'MTProto-прокси для стабильного соединения. Выберите ближайший сервер и подключитесь в одно нажатие.',btn_channel:'Наш канал',btn_howto:'Как подключить',btn_custom:'Oбxoд бeлыx cпискoв'},
-  proxies:{label:'Локации',title:'Подключение',desc:'Выберите страну и нажмите «Подключить».',connect:'Подключить ->',online:'Онлайн'},
+  proxies:{label:'Локации',title:'Подключение',desc:'Выберите страну и нажмите «Подключить».',connect:'Подключить ->',online:'Онлайн',unstable:'Нестабильный',offline:'Оффлайн',checking:'Проверяется'},
   pub:{title:'Публичные прокси',loading:'Загрузка списка…',error:'Не удалось загрузить список.'},
   pin:{title:'Сохраните сайт под рукой',desc:'Чтобы не потерять быстрый доступ к списку серверов, добавьте сайт на главный экран — открытие в один тап, без поиска во вкладках.',install:'Добавить на экран'},
   faq:{label:'FAQ',title:'Частые вопросы',items:[
@@ -362,7 +365,7 @@ ru:{
 en:{
   nav:{home:'Home',howto:'How to Connect',about:'About',pwa:'Add to Screen',contacts:'Contacts'},
   hero:{badge:'Free proxies',title:'Fast access to ',titleAccent:'Telegram',desc:'MTProto proxies for a stable connection. Choose the nearest server and connect in one tap.',btn_channel:'Our Channel',btn_howto:'How to Connect',btn_custom:'Вураssing whitеlists'},
-  proxies:{label:'Locations',title:'Connect',desc:'Choose a country and tap "Connect".',connect:'Connect ->',online:'Online'},
+  proxies:{label:'Locations',title:'Connect',desc:'Choose a country and tap "Connect".',connect:'Connect ->',online:'Online',unstable:'Unstable',offline:'Offline',checking:'Checking'},
   pub:{title:'Public proxies',loading:'Loading list…',error:'Failed to load the list.'},
   pin:{title:'Keep the site handy',desc:"Add this page to your home screen so you don't lose quick access to the server list.",install:'Add to Home Screen'},
   faq:{label:'FAQ',title:'Frequently Asked Questions',items:[
@@ -394,7 +397,7 @@ en:{
 ir:{
   nav:{home:'خانه',howto:'نحوه اتصال',about:'درباره',pwa:'افزودن به صفحه',contacts:'تماس'},
   hero:{badge:'پروکسی رایگان',title:'دسترسی سریع به ',titleAccent:'تلگرام',desc:'پروکسی MTProto برای اتصال پایدار. نزدیک‌ترین سرور را انتخاب کنید و با یک کلیک وصل شوید.',btn_channel:'کانال ما',btn_howto:'نحوه اتصال',btn_custom:'دور زدن لیست‌های سفید'},
-  proxies:{label:'مکان‌ها',title:'اتصال',desc:'کشور را انتخاب کنید و روی «اتصال» بزنید.',connect:'اتصال',online:'آنلاین'},
+  proxies:{label:'مکان‌ها',title:'اتصال',desc:'کشور را انتخاب کنید و روی «اتصال» بزنید.',connect:'اتصال',online:'آنلاین',unstable:'ناپایدار',offline:'آفلاین',checking:'در حال بررسی'},
   pub:{title:'پروکسی‌های عمومی',loading:'در حال بارگذاری لیست…',error:'بارگذاری لیست ناموفق بود.'},
   pin:{title:'سایت را در دسترس نگه دارید',desc:'برای حفظ دسترسی سریع به لیست سرورها، سایت را به صفحه اصلی اضافه کنید.',install:'افزودن به صفحه اصلی'},
   faq:{label:'سوالات متداول',title:'سوالات متداول',items:[
@@ -429,18 +432,19 @@ ir:{
 function flagImg(c){const code=String(c||'xx').toLowerCase().replace(/[^a-z-]/g,'');return '<img src="assets/flags/'+code+'.svg" width="32" height="24" alt="'+esc(c||'UN')+'" onerror="this.src=\'assets/flags/xx.svg\';this.onerror=null">';}
 
 // ============ PROXIES ============
-const PROXY_URL = 'https://raw.githubusercontent.com/llimonixbot/mtproxytg/refs/heads/files/proxies.json';
+const SITE_PROXY_URL = 'https://proxy-sponsor.llimonix.dev/v1/site-proxies';
 
 function loadProxies(){
-  fetch(PROXY_URL)
-    .then(r => r.json())
+  fetch(SITE_PROXY_URL,{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('Sponsored proxy source: '+r.status);return r.json();})
+    .then(_0x7b)
     .then(data => {
       proxies = shuffle(data.map(p => ({
         geo: p.geo || p.country || 'UN',
-        name: p.name || p.country || p.host,
         server: p.server || p.host,
         port: p.port,
-        secret: p.secret
+        secret: p.secret,
+        status: p.status || 'checking'
       })));
       renderProxies();
     })
@@ -547,9 +551,10 @@ function render(){
 
 function renderProxies(){
   const t=T[lang];
-  document.getElementById('proxyGrid').innerHTML=proxies.map(p=>
-    '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name">'+esc(p.name)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag online"><span class="proxy-status"></span>'+t.proxies.online+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect">'+t.proxies.connect+'</a></div>'
-  ).join('');
+  document.getElementById('proxyGrid').innerHTML=proxies.map(p=>{
+    const status=['online','unstable','offline'].includes(p.status)?p.status:'checking';
+    return '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name" title="'+esc(p.server)+'">'+esc(p.server)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag '+status+'"><span class="proxy-status"></span>'+esc(t.proxies[status])+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect">'+t.proxies.connect+'</a></div>';
+  }).join('');
 }
 
 function renderFAQ(){
