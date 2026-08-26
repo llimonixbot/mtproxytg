@@ -108,7 +108,7 @@ a:hover{color:var(--accent-hover)}
 .proxy-flag{width:42px;height:42px;border-radius:10px;background:var(--bg-surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
 .proxy-flag img{width:32px;height:24px;object-fit:cover;border-radius:3px;display:block}
 .proxy-meta{min-width:0;flex:1}
-.proxy-name{font-weight:600;font-size:14px;margin-bottom:2px}
+.proxy-name{font-weight:600;font-size:14px;margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px}
 .proxy-details{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .proxy-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(42,171,238,.1);color:var(--accent);font-size:11px;font-weight:500}
 .proxy-tag.online{background:rgba(79,174,78,.1);color:var(--success)}
@@ -133,7 +133,6 @@ a:hover{color:var(--accent-hover)}
 .pub-spoiler-body .proxy-grid::-webkit-scrollbar-track{background:rgba(255,255,255,.03);border-radius:3px}
 .pub-spoiler-body .proxy-grid::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:3px}
 .pub-spoiler-body .proxy-grid::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.15)}
-.pub-spoiler-body .proxy-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px}
 .pub-spoiler-loader{display:flex;align-items:center;justify-content:center;gap:12px;padding:32px 0;color:var(--text-secondary);font-size:14px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .pub-spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,.1);border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite}
@@ -193,7 +192,7 @@ a:hover{color:var(--accent-hover)}
 .content-block{padding:20px}
 .footer-inner{flex-direction:column;text-align:center}
 .pin-section{padding:24px 20px}
-.pub-spoiler-body .proxy-name{max-width:140px}
+.proxy-name{max-width:140px}
 }
 </style>
 </head>
@@ -444,7 +443,8 @@ function loadProxies(){
         server: p.server || p.host,
         port: p.port,
         secret: p.secret,
-        status: p.status || 'checking'
+        status: p.status || 'checking',
+        eventId: p.placement_id || ''
       })));
       renderProxies();
     })
@@ -554,7 +554,10 @@ function renderProxies(){
   const t=T[lang];
   document.getElementById('proxyGrid').innerHTML=proxies.map(p=>{
     const status=['online','unstable','offline'].includes(p.status)?p.status:'checking';
-    return '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name" title="'+esc(p.server)+'">'+esc(p.server)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag '+status+'"><span class="proxy-status"></span>'+esc(t.proxies[status])+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect">'+t.proxies.connect+'</a></div>';
+    const eventId=/^proxy_[0-9]+$/.test(String(p.eventId||''))?String(p.eventId):'';
+    const eventClass=eventId?' proxy-event '+eventId:'';
+    const eventAttrs=eventId?' data-rybbit-event="'+eventId+'" data-rybbit-prop-placement_id="'+eventId+'"':'';
+    return '<div class="proxy-card"><div class="proxy-info"><div class="proxy-flag">'+flagImg(p.geo)+'</div><div class="proxy-meta"><div class="proxy-name" title="'+esc(p.server)+'">'+esc(p.server)+'</div><div class="proxy-details"><span class="proxy-tag">'+esc(p.geo)+'</span><span class="proxy-tag '+status+'"><span class="proxy-status"></span>'+esc(t.proxies[status])+'</span></div></div></div><a href="tg://proxy?server='+esc(p.server)+'&port='+p.port+'&secret='+esc(p.secret)+'" class="btn-connect'+eventClass+'"'+eventAttrs+'>'+t.proxies.connect+'</a></div>';
   }).join('');
 }
 
