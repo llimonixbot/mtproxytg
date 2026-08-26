@@ -49,12 +49,6 @@
         { "key": "Cache-Control", "value": "public, max-age=86400" },
         { "key": "Service-Worker-Allowed", "value": "/" }
       ]
-    },
-    {
-      "source": "/proxies.json",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=600" }
-      ]
     }
   ],
   "rewrites": [
